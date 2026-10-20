@@ -1,3 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');  /* zaimportowana czcionka od github copilot*/
+/* wszystkie kolory wybierałem sobie ze strony coolors */
+* {
+  box-sizing: border-box;
+}
 body {
-  background-color: #dfecff;
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif; /* czcionkę zaproponował github copilot*/
+  color: #dddddd;
+  background: linear-gradient(#0d1b2a, #000000);
+}
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 40px;
+  background: linear-gradient(90deg, #c00000, #3a0000);
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4); /* cień pod headerem od github copilit */
+}
+.logo img {
+  display: block;
+  width: 50px;
+  height: 50px;
+  filter: invert(1);
+}
+h1 {
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+h2 {
+  margin-top: 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: #ff2a2a;
+}
+h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #00e5ff;
+}
+p {
+  line-height: 1.6;
+}
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* github copilot */
+  align-items: start;
+  gap: 25px;
+  max-width: 1300px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+.section:first-child {
+  grid-column: 1 / -1;
+}
+.section {
+  padding: 20px 25px;
+  background-color: #1b1b1b;
+  border-left: 4px solid #e10600;              /* czerwony pasek z lewej */
+  border-radius: 8px;                          /* zaokrąglone rogi */
+  box-shadow: 0 0 10px rgba(225, 6, 0, 0.35);  /* i czerowna neonowa poświata przez github copilot */
+}
+.engine-list { /* pomysł na listę od github copilot */
+  list-style: none;
+  padding: 0;
+}
+.engine-list li {
+  padding: 10px;
+  border-bottom: 1px solid #444444;
+}
+footer {
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #999999;
+  background-color: #000000;
+  border-top: 3px solid #e10600;
+}
+footer a {
+  color: #00e5ff;
+}
+@media (max-width: 768px) { /* takiego czegoś do responsywności nauczyłem się na praktykach */
+  .header {
+    padding: 15px 20px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  main {
+    grid-template-columns: 1fr;
+    margin: 20px auto;
+    padding: 0 12px;
+  }
 }

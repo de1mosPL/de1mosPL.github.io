@@ -1,3 +1,90 @@
+/* wszystkie kolory wybierałem sobie ze strony coolors */
+* {
+  box-sizing: border-box;
+}
 body {
-  background-color: #ecfbe6;
+  margin: 0;
+  min-height: 100vh;
+  font-family: Georgia, 'Times New Roman', serif; /* czcionkę zaproponował github copilot*/
+  line-height: 1.7;
+  color: #2b2b2b;
+  background: linear-gradient(#fdfbf5, #ece6d6);
+}
+.header {
+  padding: 30px 20px 20px;
+  text-align: center;
+  background-color: #ffffff;
+  border-bottom: 4px double #333333; /* podwójna linia pod nagłówkiem github copilot - moja wlasna nie wyglądała tak jak ta z inspiracji :,< */
+}
+.logo img {
+  width: 60px;
+  height: 60px;
+}
+h1 {
+  margin: 10px 0 0;
+  font-size: 2.8rem;
+  line-height: 1.2;
+  font-weight: normal;
+  color: #1a1a1a;
+}
+h2 {
+  padding-bottom: 5px;
+  font-size: 1.8rem;
+  font-weight: normal;
+  color: #1f3a5f;
+  border-bottom: 1px solid #1f3a5f; /* pasująca granatowa linia ja + github copilot */
+}
+h3 {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: italic;
+  color: #444444;
+}
+.section p {
+  text-align: justify;
+}
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+.section {
+  padding: 10px 0 30px;
+  border-bottom: 1px solid #cccccc;
+}
+.engine-list {
+  padding-left: 30px;
+}
+.engine-list li {
+  margin-bottom: 5px;
+}
+.engine-list li::marker {
+  color: #1f3a5f;
+}
+footer {
+  padding: 25px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #ffffff;
+  background-color: #1f3a5f;
+}
+footer a {
+  color: #ffffff;
+}
+@media (max-width: 768px) { /* takiego czegoś do responsywności nauczyłem się na praktykach */
+  .header {
+    padding: 20px 15px 15px;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  main {
+    padding: 15px;
+  }
+  .section p {
+    text-align: left;
+  }
 }
