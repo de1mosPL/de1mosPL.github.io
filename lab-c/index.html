@@ -1,14 +1,49 @@
 <!doctype html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mikołaj Borowski (55590) - AI LAB C</title>
 
+    <!-- wziąłem to z repozytorium z gita z katalogu 26-maps-leaflet z
+    leaflet.html (skopiowałem też katalog leaflet-1.9.4 do mojego projektu) -->
+    <link rel="stylesheet" href="leaflet-1.9.4/leaflet.css">
+    <script src="leaflet-1.9.4/leaflet-src.js"></script>
+    <script src="leaflet-1.9.4/leaflet-providers.js"></script>
+    <script src="leaflet-1.9.4/leaflet-image.js"></script>
+
     <link rel="stylesheet" href="styles.css" type="text/css">
     <script src="scripts.js" defer></script>
 </head>
 <body>
+    <h1>Puzzle z mapy</h1>
 
+    <button id="getLocation">Moja lokalizacja</button>
+    <button id="saveButton">Pobierz mapę</button>
+
+    <!-- to też wiąłem z repozytorium z gita z katalogu 25-geolocation z geolocation.html -->
+    <p id="positionInfo">
+        <strong>Szerokość:</strong> <span id="latitude">-</span>
+        <strong>Długość:</strong> <span id="longitude">-</span>
+    </p>
+
+    <div class="container">
+        <div>
+            <h2>Mapa</h2>
+            <div id="map"></div>
+        </div>
+        <div>
+            <h2>Mapa rastrowa</h2>
+            <canvas id="rasterMap" width="600" height="400"></canvas>
+        </div>
+        <div>
+            <h2>Stół – rozsypane puzzle</h2>
+            <div id="table"></div>
+        </div>
+        <div>
+            <h2>Plansza – ułóż mapę</h2>
+            <div id="board"></div>
+        </div>
+    </div>
 </body>
 </html>
