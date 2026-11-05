@@ -1,14 +1,37 @@
 <!doctype html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Imie Nazwisko (00000) - AI LAB D</title>
+    <title>Mikołaj Borowski (55590) - AI LAB D</title>
 
     <link rel="stylesheet" href="styles.css" type="text/css">
     <script src="scripts.js" defer></script>
 </head>
 <body>
+    <header>
+        <h1>Pogoda</h1>
 
+        <div class="search">
+            <input type="text" id="city-input" placeholder="Miejscowość, np. Barlinek">
+
+            <!-- wziąłem to z repozytorium z gita z katalogu16-fetch-from-api
+            z done.html (przycisk z onclick wywołującym funkcję) -->
+            <button id="weather-button" onclick="searchWeather()">Pogoda</button>
+        </div>
+
+        <p id="message"></p>
+    </header>
+
+    <main>
+        <section id="current" class="card">
+            <p class="placeholder">Tu pojawi się bieżąca pogoda.</p>
+        </section>
+
+        <h2>Prognoza na 5 dni (co 3 godziny)</h2>
+        <section id="forecast">
+            <p class="placeholder">Tu pojawi się prognoza pogody.</p>
+        </section>
+    </main>
 </body>
 </html>
